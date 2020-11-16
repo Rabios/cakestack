@@ -1,7 +1,7 @@
 Third party stuff:
 
 Stacking cut block logic from GitHub repo   >> https://github.com/tma02/stack
-Background designed by macrovector/Freepik  >> https://www.freepik.com/free-vector/sweet-pastries-chalkboard_1529234.htm
+Background used by the game                 >> http://getwallpapers.com/collection/cute-cupcake-backgrounds
 Blocks stacking sound from freesound.org    >> https://freesound.org/people/bassoonrckr/sounds/329355
 
 Sound licensed under the Creative Commons 0 License >> https://creativecommons.org/publicdomain/zero/1.0
