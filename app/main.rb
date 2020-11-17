@@ -5,10 +5,6 @@
 # Stacking sound: https://freesound.org/people/kemitix/sounds/41869
 
 def tick args
-  if $gtk.console.visible?
-	$gtk.console.close
-  end
-  
   # Load variables
   setup args
   
