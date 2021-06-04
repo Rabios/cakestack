@@ -2,5 +2,5 @@ devid=Rabios
 devtitle=Rabia Alhaffar
 gameid=cakestack
 gametitle=cakestack
-version=0.2
+version=0.4
 icon=metadata/icon.png
