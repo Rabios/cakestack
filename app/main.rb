@@ -1,5 +1,6 @@
 # Written by Rabia Alhaffar in 14/November/2020
 # Stacking game for teeny-tiny game jam
+# Updated: 3/June/2021
 # I got cutting block logic from following repo: https://github.com/tma02/stack
 # Background: http://getwallpapers.com/collection/cute-cupcake-backgrounds
 # Stacking sound: https://freesound.org/people/kemitix/sounds/41869
