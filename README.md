@@ -10,7 +10,7 @@ The game made in 1 hour for [TeenyTiny DragonRuby MiniGameJam](https://itch.io/j
 
 ### Controls
 
-Just, Click or hit space key to stack!
+Just click/tap or hit space key to stack!
 
 ### License
 
