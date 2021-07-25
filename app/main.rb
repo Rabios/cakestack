@@ -1,6 +1,5 @@
 # Written by Rabia Alhaffar in 14/November/2020
 # Stacking game for teeny-tiny game jam
-# Updated: 3/June/2021
 # I got cutting block logic from following repo: https://github.com/tma02/stack
 # Background: http://getwallpapers.com/collection/cute-cupcake-backgrounds
 # Stacking sound: https://freesound.org/people/kemitix/sounds/41869
@@ -29,7 +28,7 @@ def tick args
     w: 1280,
     h: 720,
     path: "sprites/background.jpg"
-  }.sprite
+  }.to_sprite
   
   # Draw FPS
   args.outputs.primitives << {
@@ -41,7 +40,7 @@ def tick args
     g: 0,
     b: 255,
     a: 255,
-  }.label
+  }.to_label
   
   # Check and render current scene
   if args.state.scene == 0
@@ -106,7 +105,7 @@ def game args
     g: 0,
     b: 255,
     a: 255
-  }.label
+  }.to_label
   
   args.outputs.primitives << {
     x: 10,
@@ -117,13 +116,13 @@ def game args
     g: 50,
     b: 100,
     a: 255
-  }.label
+  }.to_label
   
-  args.outputs.primitives << args.state.start_block.sprite
-  args.outputs.primitives << args.state.current_block.sprite
+  args.outputs.primitives << args.state.start_block.to_sprite
+  args.outputs.primitives << args.state.current_block.to_sprite
   
   args.state.blocks.each do |r|
-    args.outputs.primitives << r.sprite
+    args.outputs.primitives << r.to_sprite
   end
   
   # If key space pressed or clicked, Stack!
@@ -157,6 +156,10 @@ def game args
         h: args.state.current_block.h,
         path: args.state.current_block.path
       })
+      
+      if args.state.blocks.length + 1 > 5
+        args.state.blocks.delete_at(0)
+      end
 	
       # Setting width of movement block with last block stacked, With random cake image...
       args.state.current_block.w = args.state.blocks[args.state.blocks.length() - 1].w
@@ -196,14 +199,14 @@ def lose args
     g: 0,
     b: 0,
     a: 255
-  }.label
+  }.to_label
   
   args.outputs.primitives << {
     x: 385,
     y: 400.from_top,
     text: "Click anywhere to restart game!",
     size_enum: 8
-  }.label
+  }.to_label
   
   # Restart game if user click...
   if args.inputs.keyboard.key_up.space || args.inputs.mouse.click || (args.state.touched == 1 && (args.state.touched != args.state.touched_previously))
